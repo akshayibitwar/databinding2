@@ -1,0 +1,25 @@
+<button class="btn btn-primary mb-4" 
+[disabled]="isDisable" 
+(click)="onAddProduct()"
+>Add Product</button>
+<button class="btn btn-danger mb-4 ml-4" 
+(click)="onremovePrd()"
+[disabled]="cartCount === 0"
+>Remove Product</button>
+<p class="alert alert-info mb-4" [innerHTML]="prdStatus">
+</p>
+
+<hr>
+<input type="text" class="form-control mb-4" 
+(keyup)="onProductSearch($event)">
+<p class="alert alert-info"
+*ngIf="onSearchproduct.length > 0"
+[innerHTML]="onSearchproduct"></p>
+
+<p class="alert alert-info mb-4" 
+[innerHTML]="prdStatus"></p>
+<!-- <button class="btn btn-success mb-4"
+[disabled]="isVisible"
+(click)="onNewItemAdd()"
+>Add New Product</button>
+<p class="alert alert-danger mb-4" [innerHTML]="NewproductStatus"></p> -->
